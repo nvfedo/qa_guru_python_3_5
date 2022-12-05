@@ -5,6 +5,7 @@ import os
 
 
 def test_automation_practice_form(practice_form_open_browser):
+    browser.open('/automation-practice-form')
     #проверка валидации
     browser.element('#submit').click()
     browser.element('#firstName').should(be.blank).type('Test')
