@@ -7,7 +7,6 @@ import os
 def test_automation_practice_form(practice_form_open_browser):
     #проверка валидации
     browser.element('#submit').click()
-    browser.element('#example-modal-sizes-title-lg').should(have._not_.exact_text('Thanks for submitting the form'))
     browser.element('#firstName').should(be.blank).type('Test')
     browser.element('#lastName').should(be.blank).type('User')
     browser.element('#userEmail').should(be.blank).type('testuser2@gmail.com')
